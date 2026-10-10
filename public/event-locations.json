@@ -1,0 +1,53 @@
+{
+  "nikkah": {
+    "time": "4:30 PM",
+    "venue": "Serena hotels",
+    "address": "Islamabad, pakistan",
+    "mapsUrl": "https://google.com",
+    "image": "",
+    "contacts": [
+      {
+        "name": "Hadi",
+        "phone": "+920000000"
+      },
+      {
+        "name": "Tariq",
+        "phone": "+920000000"
+      }
+    ]
+  },
+  "barat": {
+    "time": "6:00 PM",
+    "venue": "Serena hotels",
+    "address": "Islamabad, pakistan",
+    "mapsUrl": "https://google.com",
+    "image": "",
+    "contacts": [
+      {
+        "name": "Ahmed Sohail",
+        "phone": "+920000000"
+      },
+      {
+        "name": "Ahmed Sohail",
+        "phone": "+920000000"
+      }
+    ]
+  },
+  "walima": {
+    "time": "",
+    "venue": "Canal gardens",
+    "address": "lahore, pakistan",
+    "mapsUrl": "https://google.com",
+    "image": "",
+    "contacts": [
+      {
+        "name": "Ahmed Sohail",
+        "phone": "+920000000"
+      },
+      {
+        "name": "Ahmed Sohail",
+        "phone": "+920000000"
+      }
+    ]
+  }
+}

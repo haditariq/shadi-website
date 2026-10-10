@@ -1,0 +1,7 @@
+{
+  "mode": "demo",
+  "region": "ap-south-1",
+  "bucket": "",
+  "identityPoolId": "",
+  "prefix": "hadi-mariam-photos"
+}

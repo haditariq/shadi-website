@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-10T15:09:53.186Z",
+  "guests": [
+    {
+      "id": "4e9d09edba82e854b4c7730b6dafe68e2ce4bdd116c1e7ef303d1efb119d6ba3",
+      "salt": "ANw/F7m09qRmg30fPXoFJA==",
+      "iv": "Ab9ZLzxh9ePaj0lk",
+      "cipher": "0hUYWADLzWms+9DyWZiKAyzddbYL3jxto0LW87Ru2ngTM5h022I4FuUQFn/WjkaWZBNRKvansnX3PgSGuKIZ2mBJew3ULmpvBrRN5leB"
+    },
+    {
+      "id": "2f2940769f4c9e75fd6e07f9fa9002f9a9a7b5143199f1b6359dbf03730a4f15",
+      "salt": "eLx8rjbe2xVfApZ+yu8iDg==",
+      "iv": "UJKKNdHyuOTgyUKm",
+      "cipher": "xBZqAM8Sjyt4s8GxgJZzLad7OJLQTdljk4H2VAXy0+ZQtooEVqugE/kbvIELl4vRtUte2jUg+NUgjgkju/CMXi3f0vjyTyTsKVS94rkgFQk="
+    }
+  ]
+}

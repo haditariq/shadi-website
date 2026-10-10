@@ -1,0 +1,2139 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #473b36;
+  background: #f8f1eb;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px max(24px, calc((100vw - 1160px) / 2));
+  gap: 16px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 29px;
+  font-weight: 600;
+  color: #7d5d45;
+}
+.brand i {
+  color: #bc956b;
+}
+.brand-icon {
+  background: #ead5bf;
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  display: grid;
+  place-items: center;
+}
+.small-nav {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #856f5f;
+}
+.site {
+  min-height: 100vh;
+}
+.guest-bg {
+  background: radial-gradient(
+    ellipse at 50% 15%,
+    #fffdf6 0%,
+    #f7eae2 50%,
+    #eadbd2 100%
+  );
+  position: relative;
+  /* clip, not hidden: hidden would stop the event tabs from sticking. */
+  overflow-x: clip;
+}
+.guest-bg:before,
+.guest-bg:after {
+  content: '❀';
+  color: #e5c7b6;
+  position: absolute;
+  font-size: 230px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+.guest-bg:before {
+  left: -70px;
+  top: 160px;
+}
+.guest-bg:after {
+  right: -50px;
+  bottom: 20px;
+}
+.hero {
+  max-width: 1040px;
+  margin: 50px auto 0;
+  text-align: center;
+  padding: 12px 20px 45px;
+  position: relative;
+}
+.overline {
+  letter-spacing: 0.25em;
+  color: #a58a6f;
+  font-size: 11px;
+  font-weight: 700;
+}
+.hero h1 {
+  font:
+    500 clamp(52px, 8vw, 102px)/0.96 'Cormorant Garamond',
+    serif;
+  color: #75583f;
+  margin: 26px 0;
+}
+.hero h1 em {
+  font-size: 0.7em;
+  color: #bf9871;
+}
+.subline {
+  max-width: 510px;
+  line-height: 1.8;
+  margin: 0 auto 32px;
+  color: #897769;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(199, 165, 137, 0.4);
+  box-shadow: 0 24px 65px #7657441c;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+.access {
+  max-width: 465px;
+  padding: 35px 42px 40px;
+  margin: auto;
+}
+.flourish {
+  color: #c19d79;
+  letter-spacing: 8px;
+}
+.access h2,
+.login-card h1 {
+  font:
+    500 38px 'Cormorant Garamond',
+    serif;
+  margin: 12px 0;
+}
+.access p,
+.login-card p {
+  color: #897769;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.access form,
+.login-card form {
+  display: grid;
+  gap: 17px;
+  margin-top: 25px;
+  text-align: left;
+}
+label {
+  display: grid;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #816e5e;
+}
+input:not([type='checkbox']) {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dbcbbc;
+  border-radius: 9px;
+  background: #fffcf9;
+  color: #463e3a;
+  outline: none;
+}
+input:focus {
+  border-color: #b48b62;
+  box-shadow: 0 0 0 3px #b48b6222;
+}
+.primary {
+  border: 0;
+  border-radius: 9px;
+  padding: 13px 20px;
+  background: #85664c;
+  color: white;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.primary:hover {
+  background: #6d503a;
+}
+.primary:disabled {
+  opacity: 0.5;
+}
+.footer-note {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 12px;
+  color: #ac9484;
+}
+.error {
+  background: #fff2ef;
+  color: #a44335;
+  padding: 11px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #6f865d;
+  margin: 5px auto 28px;
+}
+.invitation-grid {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.event-card {
+  text-align: left;
+  width: min(390px, 100%);
+  overflow: hidden;
+  border-radius: 17px;
+  background: white;
+  box-shadow: 0 15px 40px #8c72682a;
+}
+.event-card img {
+  width: 100%;
+  aspect-ratio: 9/14;
+  object-fit: cover;
+  display: block;
+}
+.event-info {
+  padding: 22px 25px 25px;
+}
+.event-info h3 {
+  font:
+    600 31px 'Cormorant Garamond',
+    serif;
+  margin: 12px 0;
+}
+.event-info p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #826d5c;
+}
+.pill {
+  letter-spacing: 0.18em;
+  font-size: 9px;
+  color: #b18c6e;
+}
+.download-anchor {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #886342;
+  border-bottom: 1px solid #c3a48a;
+  padding-bottom: 3px;
+  font-size: 13px;
+  margin-top: 9px;
+}
+.secondary {
+  border: 1px solid #c9ab95;
+  background: transparent;
+  color: #75583f;
+  padding: 12px 20px;
+  border-radius: 9px;
+  margin-top: 24px;
+}
+.admin-layout {
+  min-height: 100vh;
+  background: #faf7f3;
+}
+.admin-header {
+  border-bottom: 1px solid #e6ddd5;
+  background: white;
+}
+.head-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.textbtn {
+  border: none;
+  background: transparent;
+  color: #7e6755;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.login-card {
+  max-width: 450px;
+  margin: 90px auto;
+  padding: 45px 40px;
+}
+.login-icon {
+  color: #937052;
+}
+.password {
+  position: relative;
+}
+.password button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: transparent;
+  border: 0;
+  color: #7d6959;
+}
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 24px;
+}
+.dash-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.dash-title h1 {
+  font:
+    600 46px 'Cormorant Garamond',
+    serif;
+  margin: 0;
+}
+.dash-title p {
+  font-size: 13px;
+  color: #958273;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 25px 0;
+}
+.stats > div {
+  background: white;
+  border: 1px solid #ede5df;
+  border-radius: 12px;
+  padding: 20px;
+}
+.stats strong {
+  display: block;
+  color: #76563f;
+  font:
+    600 34px 'Cormorant Garamond',
+    serif;
+}
+.stats span {
+  font-size: 12px;
+  color: #8b7564;
+}
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 25px 0;
+}
+.search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e3d7cb;
+  background: white;
+  border-radius: 9px;
+  padding-left: 12px;
+}
+.search input {
+  border: 0 !important;
+  min-width: 240px;
+}
+.tool-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #d7c7b8;
+  background: white;
+  padding: 11px 13px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #765c48;
+  cursor: pointer;
+}
+.highlight {
+  background: #eee1d3;
+}
+.help {
+  background: #f2ebdf;
+  border: 1px solid #e4d5c2;
+  display: flex;
+  gap: 13px;
+  padding: 17px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #6e5c4b;
+}
+.help p {
+  line-height: 1.7;
+  margin: 5px 0 0;
+}
+.notice {
+  background: #eaf1e7;
+  border: 1px solid #c4d5bd;
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin: 15px 0;
+}
+.table-wrap {
+  overflow-x: auto;
+  background: white;
+  border: 1px solid #e9dfd6;
+  border-radius: 12px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 970px;
+}
+th {
+  text-align: left;
+  background: #f8f2ed;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #8b7260;
+  padding: 16px 13px;
+}
+td {
+  padding: 11px 13px;
+  border-top: 1px solid #efe7e1;
+}
+td input:not([type='checkbox']) {
+  padding: 10px 8px;
+  min-width: 150px;
+}
+td input[type='checkbox'] {
+  width: 19px;
+  height: 19px;
+  accent-color: #8b6b51;
+}
+.center {
+  text-align: center;
+}
+td .codecell {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+td code {
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: #704e32;
+}
+.actions {
+  display: flex;
+  gap: 5px;
+}
+.actions button,
+.codecell button {
+  background: #f5eee7;
+  border: 0;
+  border-radius: 6px;
+  padding: 7px;
+  color: #876950;
+}
+.actions .danger {
+  color: #b65a51;
+}
+.empty {
+  text-align: center;
+  color: #98887b;
+  padding: 40px;
+}
+.admin-foot {
+  font-size: 12px;
+  color: #9b8676;
+}
+.add {
+  white-space: nowrap;
+}
+@media (max-width: 650px) {
+  header {
+    padding: 15px 20px;
+  }
+  .brand {
+    font-size: 23px;
+  }
+  .hero {
+    margin-top: 35px;
+  }
+  .access {
+    padding: 28px 22px;
+  }
+  .dash-title {
+    align-items: flex-start;
+  }
+  .stats {
+    gap: 8px;
+  }
+  .stats > div {
+    padding: 15px;
+  }
+  .stats strong {
+    font-size: 28px;
+  }
+  .dashboard {
+    padding: 25px 15px;
+  }
+  .dash-title h1 {
+    font-size: 36px;
+  }
+  .add {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .login-card {
+    margin: 40px 15px;
+  }
+  .tools .search {
+    width: 100%;
+  }
+  .tool-actions {
+    width: 100%;
+  }
+}
+/* Wedding guest photo collection */
+.photo-main {
+  max-width: 740px;
+  padding: 40px 18px 75px;
+  margin: 0 auto;
+  text-align: center;
+}
+.photo-main h1 {
+  font:
+    500 clamp(46px, 7vw, 76px)/1 'Cormorant Garamond',
+    serif;
+  color: #77583e;
+  margin: 20px auto;
+}
+.photo-box {
+  max-width: 560px;
+  margin: 24px auto;
+  padding: 32px;
+  text-align: left;
+}
+.photo-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #805f44;
+  margin-bottom: 22px;
+}
+.photo-box form {
+  display: grid;
+  gap: 18px;
+}
+.file-drop {
+  border: 2px dashed #c9ab90;
+  border-radius: 15px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  background: #fffaf6;
+  padding: 18px;
+}
+.file-drop small {
+  color: #947f70;
+  font-weight: 400;
+}
+.file-drop input {
+  width: 100%;
+  max-width: 260px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.previews {
+  max-height: 210px;
+  overflow: auto;
+}
+.previews > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px;
+  border-bottom: 1px solid #e8dcd1;
+  font-size: 12px;
+}
+.previews span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.upload-note,
+.demo-warning {
+  font-size: 12px;
+  color: #8d7565;
+  line-height: 1.7;
+}
+.demo-warning {
+  padding: 11px;
+  background: #fff1d9;
+  border-radius: 8px;
+}
+.photo-box .error,
+.photo-box .notice {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.photo-share {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #e6d8c9;
+  border-radius: 16px;
+  margin: 22px 0 30px;
+  padding: 25px;
+}
+.photo-share h2 {
+  font:
+    600 31px 'Cormorant Garamond',
+    serif;
+  margin: 4px 0;
+}
+.photo-share p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #856e5d;
+}
+.photo-url {
+  overflow-wrap: anywhere;
+  font-family: monospace;
+}
+.qr-card {
+  display: grid;
+  justify-items: center;
+  gap: 9px;
+  background: #fdf8f4;
+  padding: 13px;
+  border: 1px solid #e4d5c5;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+.qr-card span {
+  font-size: 11px;
+  color: #85674c;
+}
+@media (max-width: 620px) {
+  .photo-share {
+    flex-direction: column;
+    text-align: center;
+  }
+  .photo-box {
+    padding: 20px;
+  }
+  .photo-top {
+    gap: 12px;
+  }
+}
+
+/* Event locations and map controls */
+.location-info {
+  margin-top: 15px;
+  padding: 17px;
+  background: #fcf5ef;
+  border: 1px solid #ead9c9;
+  border-radius: 12px;
+}
+.location-info .venue-title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  color: #72543d;
+  margin: 0 0 7px;
+}
+.location-info .venue-address {
+  font-size: 13px;
+  margin: 4px auto 12px;
+}
+.location-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.location-buttons .action {
+  text-decoration: none;
+}
+.location-editor {
+  margin: 23px 0;
+  padding: 24px;
+  background: #fffcf8;
+  border: 1px solid #e5d6c7;
+  border-radius: 16px;
+}
+.location-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.location-heading h2 {
+  font:
+    600 32px 'Cormorant Garamond',
+    serif;
+  color: #70503b;
+  margin: 6px 0;
+}
+.location-heading p,
+.config-warning,
+.venue-hint {
+  color: #947b68;
+  font-size: 12px;
+}
+.location-editor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.venue-edit-card {
+  padding: 20px;
+  border: 1px solid #e9ddd0;
+  background: #fff;
+  border-radius: 12px;
+  display: grid;
+  gap: 12px;
+}
+.venue-edit-card h3 {
+  font:
+    600 25px 'Cormorant Garamond',
+    serif;
+  color: #72543d;
+  margin: 0;
+}
+.venue-edit-card label {
+  display: grid;
+  gap: 5px;
+  font-size: 12px;
+  color: #866a57;
+}
+.venue-edit-card input {
+  width: 100%;
+}
+.config-warning {
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+@media (max-width: 700px) {
+  .location-editor-grid {
+    grid-template-columns: 1fr;
+  }
+  .location-editor {
+    padding: 15px;
+  }
+}
+
+/* ---------- Phones: sizing, touch targets and the guest table ---------- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+a,
+button,
+label,
+input {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+/* 16px stops iOS Safari zooming the page when a field is focused. */
+input:not([type='checkbox']):not([type='file']) {
+  font-size: 16px;
+  min-height: 48px;
+}
+.site,
+.admin-layout {
+  min-height: 100dvh;
+}
+.primary,
+.secondary {
+  min-height: 48px;
+}
+.action {
+  min-height: 44px;
+}
+.small-nav,
+.textbtn {
+  min-height: 44px;
+  padding: 0 4px;
+  font-size: 14px;
+}
+.brand {
+  white-space: nowrap;
+}
+.password input {
+  padding-right: 50px;
+}
+.password button {
+  top: 2px;
+  right: 2px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}
+.footer-note a {
+  display: inline-block;
+  padding: 14px 6px;
+}
+.download-anchor {
+  min-height: 44px;
+  border-bottom: 0;
+  padding-bottom: 0;
+  text-decoration: underline;
+  text-decoration-color: #c3a48a;
+  text-underline-offset: 5px;
+  font-size: 14px;
+}
+.pill {
+  font-size: 11px;
+}
+.file-drop small {
+  font-size: 12px;
+}
+th small {
+  font-size: 11px;
+}
+.location-buttons .action {
+  flex: 1 1 140px;
+  justify-content: center;
+  min-height: 48px;
+}
+.check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  cursor: pointer;
+}
+.check span,
+.btn-text {
+  display: none;
+}
+.actions button,
+.codecell button {
+  min-width: 40px;
+  min-height: 40px;
+  display: inline-grid;
+  place-items: center;
+}
+.dashboard .notice {
+  position: sticky;
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  z-index: 5;
+  box-shadow: 0 8px 24px #7657442e;
+}
+@media (max-width: 760px) {
+  header {
+    padding: 10px max(16px, env(safe-area-inset-right)) 10px
+      max(16px, env(safe-area-inset-left));
+  }
+  .hero,
+  .photo-main,
+  .dashboard {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+    padding-bottom: calc(45px + env(safe-area-inset-bottom));
+  }
+  .guest-bg:before,
+  .guest-bg:after {
+    font-size: 160px;
+  }
+  .head-actions {
+    gap: 4px;
+    flex-shrink: 0;
+  }
+  .admin-header .brand {
+    font-size: 21px;
+    min-width: 0;
+  }
+  .admin-header .brand-icon {
+    display: none;
+  }
+  .help svg {
+    flex-shrink: 0;
+  }
+  .dash-title {
+    flex-wrap: wrap;
+  }
+  .add {
+    min-height: 48px;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  .search {
+    width: 100%;
+  }
+  .search input {
+    min-width: 0;
+    flex: 1;
+  }
+  .tool-actions .action,
+  .location-heading .action,
+  .photo-share .action {
+    flex: 1 1 100%;
+    justify-content: center;
+    min-height: 48px;
+    font-size: 14px;
+  }
+  .location-heading .action {
+    width: 100%;
+  }
+  .secondary {
+    width: 100%;
+  }
+
+  /* Guest table becomes one card per guest: no sideways scrolling. */
+  .table-wrap {
+    overflow: visible;
+    background: none;
+    border: 0;
+    border-radius: 0;
+  }
+  table {
+    display: block;
+    min-width: 0;
+  }
+  thead {
+    display: none;
+  }
+  tbody {
+    display: grid;
+    gap: 14px;
+  }
+  tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 10px;
+    padding: 16px;
+    background: white;
+    border: 1px solid #e9dfd6;
+    border-radius: 14px;
+  }
+  td {
+    display: block;
+    grid-column: 1 / -1;
+    padding: 0;
+    border: 0;
+    min-width: 0;
+  }
+  td[data-label]:before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #816e5e;
+  }
+  td input:not([type='checkbox']) {
+    min-width: 0;
+    padding: 12px 14px;
+  }
+  td.center {
+    grid-column: auto;
+    text-align: left;
+  }
+  .check {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 12px;
+    border: 1px solid #dbcbbc;
+    border-radius: 9px;
+    background: #fffcf9;
+    font-size: 13px;
+  }
+  .check span,
+  .btn-text {
+    display: inline;
+  }
+  td input[type='checkbox'] {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+  td .codecell {
+    justify-content: space-between;
+    gap: 10px;
+  }
+  td code {
+    font-size: 15px;
+    overflow-wrap: anywhere;
+  }
+  .codecell button {
+    min-width: 48px;
+    min-height: 48px;
+    flex-shrink: 0;
+  }
+  .actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 48px;
+    padding: 8px 4px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  td.empty {
+    padding: 28px 12px;
+  }
+}
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 44px;
+  }
+  .photo-main h1 {
+    font-size: 40px;
+  }
+  .access h2,
+  .login-card h1 {
+    font-size: 32px;
+  }
+  .brand {
+    font-size: 21px;
+  }
+  .access,
+  .login-card {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+/* Admin pages and guest filters */
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin: 4px 0 22px;
+  border-bottom: 1px solid #e6ddd5;
+}
+.tab {
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  min-height: 48px;
+  padding: 0 14px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #8b7564;
+}
+.tab.active {
+  color: #6d503a;
+  border-bottom-color: #85664c;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+.chip {
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid #d7c7b8;
+  border-radius: 999px;
+  background: white;
+  font-size: 13px;
+  font-weight: 700;
+  color: #765c48;
+}
+.chip.active {
+  background: #85664c;
+  border-color: #85664c;
+  color: white;
+}
+.shown {
+  margin-left: auto;
+  font-size: 12px;
+  color: #8b7564;
+}
+@media (max-width: 760px) {
+  .tab {
+    flex: 1;
+    padding: 0 6px;
+  }
+  .shown {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.hero {
+  margin-top: 16px;
+}
+
+/* ---------- Guest: one invitation at a time, tabs to switch event ---------- */
+.event-tabs {
+  display: flex;
+  gap: 6px;
+  width: min(390px, 100%);
+  margin: 0 auto 16px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(199, 165, 137, 0.4);
+  border-radius: 14px;
+}
+.event-tab {
+  flex: 1;
+  display: grid;
+  gap: 2px;
+  min-height: 52px;
+  padding: 6px 4px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  font:
+    600 20px 'Cormorant Garamond',
+    serif;
+  color: #856f5f;
+}
+.event-tab small {
+  font:
+    500 11px 'DM Sans',
+    sans-serif;
+  letter-spacing: 0.04em;
+}
+.event-tab.active {
+  background: #85664c;
+  color: white;
+}
+.revealed .event-card {
+  margin: 0 auto;
+}
+.contacts {
+  margin-top: 14px;
+  padding: 14px 17px;
+  border: 1px solid #ead9c9;
+  border-radius: 12px;
+}
+.event-info .contacts-title {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a58a6f;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 0;
+}
+.contact span {
+  display: grid;
+  min-width: 0;
+  font-size: 14px;
+  color: #5d4a3c;
+}
+.contact small {
+  font-size: 13px;
+  color: #826d5c;
+}
+.contact .action {
+  flex-shrink: 0;
+}
+.load-failed {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 16px;
+  padding: 24px;
+  text-align: center;
+}
+
+/* ---------- Admin: pages ---------- */
+.tabs {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tab {
+  white-space: nowrap;
+}
+.stats {
+  grid-template-columns: repeat(4, 1fr);
+}
+.add-form {
+  display: grid;
+  gap: 18px;
+  max-width: 520px;
+  padding: 24px;
+  background: white;
+  border: 1px solid #e9dfd6;
+  border-radius: 16px;
+}
+.add-form fieldset {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.add-form legend {
+  padding: 0;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #816e5e;
+}
+.check.wide {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 14px;
+  border: 1px solid #dbcbbc;
+  border-radius: 9px;
+  background: #fffcf9;
+  font-size: 15px;
+  font-weight: 600;
+  color: #5d4a3c;
+}
+.check.wide span {
+  display: inline;
+}
+.check.wide small {
+  margin-left: 6px;
+  font-weight: 400;
+  color: #947f70;
+}
+.check.wide input {
+  width: 22px;
+  height: 22px;
+  accent-color: #8b6b51;
+  flex-shrink: 0;
+}
+.just-added {
+  display: grid;
+  gap: 10px;
+  max-width: 520px;
+  margin-top: 26px;
+}
+.just-added h2 {
+  margin: 0;
+  font:
+    600 26px 'Cormorant Garamond',
+    serif;
+  color: #70503b;
+}
+.added-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  background: white;
+  border: 1px solid #e9dfd6;
+  border-radius: 12px;
+}
+.added-row span {
+  display: grid;
+  flex: 1 1 160px;
+  min-width: 0;
+  font-size: 14px;
+}
+.added-row small {
+  font-size: 12px;
+  color: #8b7564;
+}
+.location-editor-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+}
+.contact-edit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.artwork {
+  display: flex;
+  gap: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #efe7e1;
+}
+.artwork img {
+  width: 84px;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e4d5c5;
+  flex-shrink: 0;
+}
+.artwork > div {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  justify-items: start;
+  font-size: 13px;
+  color: #72543d;
+}
+.artwork small {
+  font-size: 12px;
+  color: #947b68;
+}
+.save-all {
+  margin-top: 20px;
+}
+.unsaved {
+  padding: 11px 13px;
+  margin: 0 0 16px;
+  background: #fff1d9;
+  border-radius: 8px;
+  color: #7a5a2c;
+}
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.qr-card canvas {
+  width: 190px !important;
+  height: 190px !important;
+}
+@media (max-width: 1000px) {
+  .location-editor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 760px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tab {
+    flex: 0 0 auto;
+    padding: 0 12px;
+  }
+  tr {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .check {
+    padding: 0 8px;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .add-form {
+    padding: 18px;
+  }
+  .add-form .primary,
+  .save-all,
+  .share-buttons .action {
+    width: 100%;
+  }
+  .contact-edit {
+    grid-template-columns: 1fr;
+  }
+  .photo-share .share-buttons {
+    justify-content: center;
+  }
+}
+
+.contact {
+  flex-wrap: wrap;
+}
+.contact-buttons {
+  display: flex;
+  gap: 8px;
+  flex: 1 1 100%;
+}
+.contact-buttons .action:first-child {
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+}
+
+/* ---------- Invitation view: built for one-handed phone use ---------- */
+.opening {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 22px;
+  text-align: center;
+  color: #856f5f;
+}
+.spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid #e5d3c2;
+  border-top-color: #85664c;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+.invited header {
+  justify-content: center;
+  padding-top: 14px;
+  padding-bottom: 4px;
+}
+.invited .hero {
+  margin-top: 0;
+  padding-top: 4px;
+}
+.greeting {
+  margin: 6px auto 14px;
+  font:
+    500 22px/1.3 'Cormorant Garamond',
+    serif;
+  color: #75583f;
+}
+.greeting strong {
+  font-weight: 700;
+}
+/* Tabs stay reachable while the guest scrolls through the details. */
+.event-tabs {
+  position: sticky;
+  top: max(8px, env(safe-area-inset-top));
+  z-index: 10;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 252, 248, 0.92);
+  box-shadow: 0 6px 20px #7657441f;
+}
+.event-tab {
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.revealed .event-card {
+  animation: rise 0.35s ease-out;
+}
+.artwork-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  /* Holds the space before the picture arrives, so nothing jumps. */
+  aspect-ratio: 941 / 1672;
+  background: linear-gradient(160deg, #f6e9df, #ead8ca);
+}
+.event-card .artwork-button img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.artwork-button.loaded img {
+  opacity: 1;
+}
+.zoom-hint {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(60, 44, 33, 0.62);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+.event-info h3 {
+  font-size: 36px;
+  margin: 8px 0 14px;
+}
+.facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0;
+}
+.facts > div {
+  padding: 12px 14px;
+  border: 1px solid #ead9c9;
+  border-radius: 12px;
+  background: #fcf5ef;
+}
+.facts dt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #a58a6f;
+}
+.facts dd {
+  margin: 6px 0 0;
+  font:
+    600 22px 'Cormorant Garamond',
+    serif;
+  color: #5d4a3c;
+}
+.location-info .venue-title,
+.location-info .venue-address {
+  justify-content: flex-start;
+  text-align: left;
+}
+.location-info .venue-title strong {
+  font-size: 16px;
+}
+.location-info .venue-address {
+  margin: 4px 0 14px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.directions {
+  width: 100%;
+  min-height: 52px;
+  font-size: 16px;
+  text-decoration: none;
+}
+.link-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 4px;
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #886342;
+}
+.contact strong {
+  font-size: 16px;
+}
+.contact-buttons .action {
+  min-height: 48px;
+  font-size: 14px;
+}
+.save-invite {
+  width: 100%;
+  justify-content: center;
+  min-height: 48px;
+  margin-top: 14px;
+  font-size: 14px;
+}
+.swipe-hint {
+  display: none;
+  margin: 14px 0 0;
+  font-size: 12px;
+  color: #ac9484;
+}
+.photo-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: min(390px, 100%);
+  min-height: 64px;
+  margin: 18px auto 0;
+  padding: 12px 18px;
+  text-align: left;
+  background: white;
+  border: 1px solid #e6d8c9;
+  border-radius: 16px;
+  color: #72543d;
+}
+.photo-cta span {
+  display: grid;
+  font-size: 15px;
+}
+.photo-cta small {
+  font-size: 12px;
+  color: #947f70;
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+  background: rgba(30, 22, 17, 0.94);
+  overflow: auto;
+  /* Let the guest pinch to read small print on the artwork. */
+  touch-action: pinch-zoom pan-x pan-y;
+}
+.lightbox img {
+  max-width: 100%;
+  max-height: 100dvh;
+  object-fit: contain;
+}
+.lightbox-close {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  right: 12px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  color: white;
+}
+@media (max-width: 760px) {
+  .invited .hero {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+  .event-info {
+    padding: 20px 18px 22px;
+  }
+  .swipe-hint {
+    display: block;
+  }
+}
+@media (pointer: coarse) {
+  .swipe-hint {
+    display: block;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .revealed .event-card,
+  .spinner {
+    animation: none;
+  }
+  .artwork-button img,
+  .event-tab {
+    transition: none;
+  }
+}
+
+/* Groom's side / bride's side */
+.side-choice {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.side-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  border: 1px solid #dbcbbc;
+  border-radius: 9px;
+  background: #fffcf9;
+  font-size: 15px;
+  font-weight: 600;
+  color: #5d4a3c;
+  cursor: pointer;
+}
+.side-option {
+  position: relative;
+}
+/* The real radio covers its own button only. Without the explicit box it
+   inherited the full-width text-field sizing and sat over the other option. */
+.side-option input {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100%;
+  min-height: 0 !important;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.side-option.active {
+  background: #85664c;
+  border-color: #85664c;
+  color: white;
+}
+.side-option:focus-within {
+  box-shadow: 0 0 0 3px #b48b6244;
+}
+select {
+  font: inherit;
+  font-size: 16px;
+  width: 100%;
+  min-width: 140px;
+  min-height: 48px;
+  padding: 0 10px;
+  border: 1px solid #dbcbbc;
+  border-radius: 9px;
+  background: #fffcf9;
+  color: #463e3a;
+}
+.chip-gap {
+  width: 10px;
+}
+@media (max-width: 760px) {
+  .chip-gap {
+    flex-basis: 100%;
+    height: 0;
+  }
+  select {
+    min-width: 0;
+  }
+}
+
+.resuming {
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+  text-align: center;
+  color: #856f5f;
+}
+
+/* ---------- Invitation: animated button that opens the details drawer ---------- */
+.details-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 72px;
+  padding: 14px 18px;
+  border: 0;
+  background: #85664c;
+  color: white;
+  text-align: left;
+  overflow: hidden;
+}
+/* A soft band of light sweeps across to draw the eye. */
+.details-button:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  animation: shimmer 2.8s ease-in-out infinite;
+}
+.details-button > span:last-child {
+  display: grid;
+  gap: 2px;
+}
+.details-button strong {
+  font:
+    600 24px/1.1 'Cormorant Garamond',
+    serif;
+}
+.details-button small {
+  font-size: 13px;
+  opacity: 0.88;
+}
+.details-arrow {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: nudge 1.6s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0%,
+  35% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(40, 28, 20, 0.5);
+  animation: fade 0.25s ease-out;
+}
+.sheet {
+  display: flex;
+  flex-direction: column;
+  width: min(480px, 100%);
+  max-height: 90dvh;
+  background: white;
+  border-radius: 22px 22px 0 0;
+  box-shadow: 0 -12px 40px #3c2c2140;
+  animation: slide-up 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
+  text-align: left;
+}
+.sheet-handle {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  min-height: 52px;
+  touch-action: none;
+}
+.sheet-handle > span {
+  width: 44px;
+  height: 5px;
+  border-radius: 3px;
+  background: #dccbbb;
+}
+.sheet-close {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: #f5eee7;
+  color: #72543d;
+}
+.sheet .event-info {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0 20px calc(22px + env(safe-area-inset-bottom));
+}
+.venue-pending {
+  margin: 14px 0 0;
+  padding: 14px 16px;
+  border: 1px dashed #dccbbb;
+  border-radius: 12px;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .details-button:after,
+  .details-arrow,
+  .sheet,
+  .sheet-backdrop {
+    animation: none;
+  }
+}
+/* The details button floats at the bottom of the screen, always in reach. */
+.details-button {
+  position: fixed;
+  left: 50%;
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  z-index: 20;
+  width: min(390px, calc(100% - 24px));
+  min-height: 68px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px #3c2c2159;
+  transform: translateX(-50%);
+}
+.invited .hero {
+  padding-bottom: calc(110px + env(safe-area-inset-bottom));
+}
+.revealed .event-card {
+  /* A transform here would trap the floating button inside the card. */
+  animation-name: fade;
+}
+
+/* ---------- Invitation fits one screen: no scrolling ---------- */
+.invited {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+}
+.invited header {
+  flex-shrink: 0;
+  padding: max(8px, env(safe-area-inset-top)) 16px 0;
+}
+.invited .brand {
+  font-size: 20px;
+}
+.invited .brand-icon {
+  width: 26px;
+  height: 26px;
+  font-size: 13px;
+}
+.invited .hero,
+.invited .revealed,
+.event-stage,
+.invited .event-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+.invited .hero {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 max(12px, env(safe-area-inset-right))
+    calc(10px + env(safe-area-inset-bottom))
+    max(12px, env(safe-area-inset-left));
+}
+.invited .greeting {
+  flex-shrink: 0;
+  margin: 2px auto 8px;
+  font-size: 18px;
+}
+.invited .event-tabs {
+  position: static;
+  flex-shrink: 0;
+  margin-bottom: 8px;
+}
+.invited .event-tab {
+  min-height: 46px;
+  font-size: 18px;
+}
+.invited .event-card {
+  width: 100%;
+  align-items: center;
+  overflow: visible;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+/* The artwork takes whatever height is left and is never cropped. */
+.invited .artwork-button {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  aspect-ratio: auto;
+  background: none;
+}
+.invited .artwork-button img {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 14px;
+}
+.invited .zoom-hint {
+  right: 50%;
+  transform: translateX(50%);
+  white-space: nowrap;
+}
+.invited .details-button {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  flex-shrink: 0;
+  margin-top: 12px;
+  transform: none;
+  overflow: visible;
+  animation: pop 1.5s ease-in-out infinite;
+}
+/* Popping: the button swells and a ring ripples out from it. */
+.invited .details-button:after {
+  inset: 0;
+  border-radius: inherit;
+  background: none;
+  transform: none;
+  animation: ring 1.5s ease-out infinite;
+}
+@keyframes pop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.045);
+  }
+}
+@keyframes ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(133, 102, 76, 0.55);
+  }
+  100% {
+    box-shadow: 0 0 0 16px rgba(133, 102, 76, 0);
+  }
+}
+.sheet .photo-cta {
+  width: 100%;
+  margin-top: 12px;
+  background: #fcf5ef;
+}
+@media (max-height: 620px) {
+  .invited header {
+    display: none;
+  }
+  .invited .greeting {
+    margin-top: max(6px, env(safe-area-inset-top));
+    font-size: 16px;
+  }
+  .invited .details-button {
+    min-height: 60px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .invited .details-button,
+  .invited .details-button:after {
+    animation: none;
+  }
+}
+.invited .artwork-button {
+  align-items: center;
+}
+.invited .artwork-button img {
+  /* Sized by its own proportions, so the rounded corners hug the picture. */
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+/* Smaller phones: a one-line button leaves more room for the artwork. */
+@media (max-width: 380px), (max-height: 700px) {
+  .invited .details-button {
+    min-height: 60px;
+    padding: 8px 14px;
+  }
+  .invited .details-button small {
+    display: none;
+  }
+  .invited .details-button strong {
+    font-size: 22px;
+  }
+  .invited .details-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Invitation view is only the event tabs, the artwork and the details button. */
+.invited .hero {
+  padding-top: max(10px, env(safe-area-inset-top));
+}
+
+/* ---------- Invitation artwork fills the whole screen ---------- */
+.invited .hero {
+  position: relative;
+  padding: 0;
+}
+.invited .event-card {
+  position: static;
+}
+.invited .artwork-button {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.invited .artwork-button img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  border-radius: 0;
+}
+/* Tabs and the details button sit on top of the artwork. */
+.invited .event-tabs {
+  position: absolute;
+  top: max(10px, env(safe-area-inset-top));
+  left: 50%;
+  z-index: 5;
+  width: min(390px, calc(100% - 24px));
+  margin: 0;
+  transform: translateX(-50%);
+}
+.invited .details-button {
+  position: absolute;
+  left: 50%;
+  bottom: calc(14px + env(safe-area-inset-bottom));
+  z-index: 5;
+  width: min(390px, calc(100% - 24px));
+  margin: 0 0 0 calc(min(390px, 100% - 24px) / -2);
+}
+.invited .zoom-hint {
+  bottom: calc(104px + env(safe-area-inset-bottom));
+}
+
+.event-info .sheet-guest {
+  display: block;
+  margin: 0 0 10px;
+  font:
+    500 26px/1.2 'Cormorant Garamond',
+    serif;
+  color: #75583f;
+  overflow-wrap: anywhere;
+}
+.sheet-guest strong {
+  font-weight: 700;
+}

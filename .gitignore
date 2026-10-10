@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.env*
+private/*.json
+!.env.example
+!private/guest-list.example.json

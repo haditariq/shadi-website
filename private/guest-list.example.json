@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "guests": [
+    {"id":"example-1","name":"Example Guest","side":"groom","code":"","nikkah":true,"barat":true,"walima":false}
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "hadi-mariam-wedding-invitations",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "dev:https": "vite --host 0.0.0.0 --mode https",
+    "tunnel": "cloudflared tunnel --url https://localhost:5173 --no-tls-verify",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.900.0",
+    "@aws-sdk/credential-provider-cognito-identity": "^3.972.72",
+    "lucide-react": "^0.468.0",
+    "qrcode.react": "^4.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-basic-ssl": "^2.3.0",
+    "cloudflared": "^0.7.3",
+    "vite": "^6.1.0"
+  }
+}
